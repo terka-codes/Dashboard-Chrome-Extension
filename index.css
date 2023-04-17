@@ -20,31 +20,52 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.bookmarks-list {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  background: white;
-  top: 0;
-  left: 0;
-  height: 2rem;
-  margin: 0;
-  gap: 10px;
-  color: black;
-  text-decoration: none;
-  padding: 0.5em;
-  list-style-type: none;
+  overflow: hidden;
 }
 
 div.top {
   display: flex;
   justify-content: space-between;
+}
+
+.bookmarks-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  max-width: 500px;
+  margin: 0;
+  gap: 10px;
+  text-decoration: none;
+  padding: 0.5em;
+  list-style-type: none;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
+  padding: 15px;
+}
+
+.bookmarks-list li {
+  min-width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bookmarks-list a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 1rem;
+  padding: 0.35rem;
+}
+
+.bookmarks-list a:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 h1.time {
